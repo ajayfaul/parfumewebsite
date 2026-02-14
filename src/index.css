@@ -1,0 +1,102 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@theme {
+  /* Modern Yellow Color Palette */
+  --color-zest-yellow: #FFB800;
+  --color-zest-yellow-light: #FFF4D6;
+  --color-zest-yellow-dark: #E69500;
+  --color-zest-orange: #FF9500;
+  --color-zest-cream: #FFFAEB;
+
+  /* Gradients */
+  --gradient-yellow: linear-gradient(135deg, #FFB800 0%, #FF9500 100%);
+  --gradient-yellow-light: linear-gradient(135deg, #FFF4D6 0%, #FFFAEB 100%);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.4s ease-out forwards;
+}
+
+/* Custom Utilities */
+.gradient-yellow {
+  background: linear-gradient(135deg, #FFB800 0%, #FF9500 100%);
+}
+
+.gradient-yellow-light {
+  background: linear-gradient(135deg, #FFF4D6 0%, #FFFAEB 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #FFB800 0%, #FF9500 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #1f2937;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Card Hover Effects */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
